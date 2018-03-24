@@ -1,0 +1,264 @@
+html 
+{
+	height: 100%;
+}
+
+body   
+{ 
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	background-color : black;
+	height: 100vh;
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Francois One', sans-serif;
+	color: white;
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
+	 
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#canvas       
+{ 
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	top: 0px;
+	width: 100% !important;
+	max-width: 100% !important;
+	min-width: 100% !important;
+	min-height: auto !important;
+	height: auto !important;
+	position: relative !important; 
+	z-index: 0;
+	padding: 0px;
+}
+
+#tips       
+{ 
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	text-align: center;
+	font-size: 2.5vw;
+}
+
+#container canvas, #lifeHud 
+{ 	
+	background-image: url("../images/vidas3.png");
+	background-size: 100% auto ;
+    background-repeat: no-repeat;
+    background-position: left top;
+	
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	z-index: 1;
+}
+
+#container canvas, #powerUp1 
+{ 
+	background-image: url("../images/boton_freno.png");
+	background-size: 100% auto ;
+    background-repeat: no-repeat;
+    background-position: left top;
+	
+	position: absolute;
+    left: 0px;
+    top: 0px;
+	z-index: 1;
+	
+	width: 0px;
+	height: 0px;
+}
+
+#container canvas, #powerUp2 
+{ 
+	background-image: url("../images/boton_separar.png");
+	background-size: 100% auto ;
+    background-repeat: no-repeat;
+    background-position: left top;
+
+	position: absolute;
+    right:0px;
+	top: 0px;
+	z-index: 1;
+	margin-right:0px;
+	
+	width: 0px;
+	height: 0px;
+}
+
+#container canvas, #end 
+{ 
+	font-family: 'Francois One', sans-serif;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	margin-left : 30%;
+	margin-top : 50%;
+	font-size: 80px;
+	text-align: center;
+	padding: 0px;
+	
+	background-image: url("../images/pastilla.png");
+	background-size: 100% auto ;
+    background-repeat: no-repeat;
+    background-position: left top;
+	
+	color: #55392a;
+	text-shadow: none;
+}
+
+#container canvas, #words 
+{ 
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	margin-left : 30%;
+	margin-top : 10%;
+	font-size: 80px;
+}
+
+#container canvas, #points 
+{ 
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	font-size: 40px;
+	text-align: center;
+}
+
+#container canvas, #walinwas 
+{ 
+	position:absolute;
+	right: 0px;
+	top: 0px;
+	width: 5%;
+	height: 5%;
+	margin-right:0px;
+	font-size: 40px;
+	text-align: left;
+	text-align: center;
+}
+#walinwaImg 
+{ 
+	width: 50%;
+	margin-left:5px;
+	display: inline;
+	right: 0px;
+	margin-right:0px;
+	float: right;
+}
+#walinwasTxt 
+{ 
+	display: inline;
+	float: right;
+}
+
+#container canvas, #arrowLeft 
+{ 
+	left:0px;
+	margin-left:0px;
+	margin-top:300px;
+		
+	opacity: 0.4;
+    filter: alpha(opacity=40); 
+}
+
+#container canvas, #arrowRight
+{ 
+	right:0px;
+	margin-right:0px;
+	margin-top:300px;
+	
+    -webkit-transform: scaleX(-1);
+    -moz-transform: scaleX(-1);
+    transform: scaleX(-1);
+		
+	opacity: 0.4;
+    filter: alpha(opacity=40); 
+}
+
+.arrow
+{ 
+	pointer-events: none;
+	width: 7%;
+	position: absolute;
+	top: 0;
+}
+
+#buttonEnd 
+{
+	text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+	 
+	cursor: pointer; 
+	margin: 15px;
+    background-color: #dab06d; /* Green */
+    border: none;
+    color: white;
+    padding: 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+	border-radius: 10px;
+}
+
+/************LOADER**************/
+#container canvas, #loaderScreen 
+{
+	background-color: black; 
+    position: absolute;
+    left: 0px;
+    top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 25;
+}
+#container canvas, #loader 
+{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 20;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}

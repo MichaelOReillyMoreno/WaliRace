@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Racer</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="user-scalable=no"/>
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Francois+One" rel="stylesheet">
+	<link href="style/style.css" rel="stylesheet" type="text/css" />
+</head> 
+
+<body id="body"> 
+
+	<canvas id="canvas">
+	  Sorry, this game cannot be run because your browser does not support the &lt;canvas&gt; element
+	</canvas>
+	<div id="end"></div>
+	<div id="words"></div>
+	<div id="points">0</div>
+	
+	<div id="walinwas"><img src="images/walinwa.png" id="walinwaImg"> <div id="walinwasTxt">0</div></div>
+	
+	<img src="images/arrow.png" id="arrowLeft" class="arrow">
+	<img src="images/arrow.png" id="arrowRight" class="arrow">
+	
+	<div id="loaderScreen"><div id="tips"></div></div><div id="loader"></div>
+	
+	<div id="lifeHud"></div>
+	<div id="powerUp1"></div>
+	<div id="powerUp2"></div>
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="source/dom_util.js"></script>
+	<script src="source/math_util.js"></script>
+	<script src="source/processing_statement.js"></script>
+	<script src="source/constants.js"></script>
+	<script src="source/hud_util.js"></script>
+	<script src="source/global_vars.js"></script>
+	<script src="source/road_builder.js"></script>
+	<script src="source/render.js"></script>
+	<script src="source/world_render_utils.js"></script>
+	<script src="source/player.js"></script>
+	<script src="source/cars_util.js"></script>
+	<script src="source/words_util.js"></script>
+	<script src="source/game_util.js"></script>
+	<script src="source/game_manager.js"></script>
+
+</body> 
+
